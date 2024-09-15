@@ -143,11 +143,14 @@ def load(engine: str, persist: dict, retry: bool = False) -> tuple[dict, list, d
         # 保存旧有配置
         rawdata = deepcopy(data)
 
+
         if retry and unknowns:
             for k in list(unknowns.keys()):
                 v = unknowns.get(k, {})
+                v["enable"] = True
                 if v and v.get("enable", True):
                     # 包含订阅，再次检测，否则重新注册
+                    v["sub"] = ""
                     if not utils.isblank(v.get("sub", "")):
                         exists[k] = v
                     else:
