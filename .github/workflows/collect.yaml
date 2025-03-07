@@ -64,7 +64,7 @@ jobs:
       - name: CollectCollect
         #run: python -u subscribe/collect.py --all --overwrite --refresh --easygoing --chuck --num 64 --url https://www.google-analytics.com/g/collect
         #run: python -u subscribe/collect.py --all --overwrite --skip --url https://www.google-analytics.com/g/collect
-        run: python -u subscribe/collect.py --all --url https://www.google-analytics.com/g/collect --delay 600 --num
+        run: python -u subscribe/collect.py --all --url https://www.google-analytics.com/g/collect --delay 600 --num 64
     
 
       - name: Timestamp
