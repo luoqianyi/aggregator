@@ -65,7 +65,7 @@ jobs:
         #run: python -u subscribe/collect.py --all --overwrite --refresh --easygoing --chuck --num 64 --url https://www.google-analytics.com/g/collect
         #run: python -u subscribe/collect.py --all --overwrite --skip --url https://www.google-analytics.com/g/collect
         #run: python -u subscribe/collect.py --all --overwrite --url https://www.google-analytics.com/g/collect --delay 600 --skip
-        run: python -u subscribe/collect.py --all --overwrite --skip --url https://www.google-analytics.com/g/collect --delay 600 --refresh
+        run: python -u subscribe/collect.py --all --overwrite --skip --url https://webrtc.chatgpt.com --delay 2000 --refresh
 
       - name: Timestamp
         run: date
