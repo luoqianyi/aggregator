@@ -23,7 +23,7 @@ exclude_remarks = ["(?i)(到期|流量|Expire|Traffic|时间|官网|引导页?|�
 #include_remarks = ["V3.*港"]
 
 # Enable script support for filtering nodes
-enable_filter = false
+enable_filter = true
 # Script used for filtering nodes. Supports inline script and script path. A "filter" function with 1 argument which is a node should be defined in the script.
 # Example: Inline script: set value to content of script.
 #          Script path: set value to "path:/path/to/script.js".
@@ -122,14 +122,14 @@ replace = '$1:$2:$3:0:0:0'
 #skip_cert_verify_flag = true
 #tls13_flag = false
 
-sort_flag = false
+sort_flag = true
 # Script used for sorting nodes. A "compare" function with 2 arguments which are the 2 nodes to be compared should be defined in the script. Supports inline script and script path.
 # Examples can be seen at the filter_script option in [common] section.
-#sort_script = '''
-#function compare(node_a, node_b) {
-#   return info_a.Remark > info_b.Remark;
-#}
-#'''
+sort_script = '''
+function compare(node_a, node_b) {
+   return info_a.Remark > info_b.Remark;
+}
+'''
 
 filter_deprecated_nodes = false
 append_sub_userinfo = true
@@ -147,8 +147,8 @@ clash_proxies_style = "flow"
 singbox_add_clash_modes = true
 
 [[node_pref.rename_node]]
-match = '/(.*)/'
-replace = "落迁忆-$1"
+match = '(.*)'
+replace = "落迁忆_$1"
 
 [managed_config]
 # Append a '#!MANAGED-CONFIG' info to Surge configurations
