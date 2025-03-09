@@ -63,8 +63,8 @@ jobs:
           fi
       - name: CollectCollect
         #run: python -u subscribe/collect.py --all --overwrite --refresh --easygoing --chuck --num 64 --url https://www.google-analytics.com/g/collect
-        #run: python -u subscribe/collect.py --all --overwrite --skip --url https://www.google-analytics.com/g/collect
-        run: python -u subscribe/collect.py --all --url https://www.google-analytics.com/g/collect --easygoing --overwrite --num 100
+        run: python -u subscribe/collect.py --all --overwrite --url https://www.google-analytics.com/g/collect
+        #run: python -u subscribe/collect.py --all --url https://www.google-analytics.com/g/collect --easygoing --overwrite --num 100
     
 
       - name: Timestamp
