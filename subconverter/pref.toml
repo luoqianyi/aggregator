@@ -147,8 +147,8 @@ clash_proxies_style = "flow"
 singbox_add_clash_modes = true
 
 [[node_pref.rename_node]]
-match = '\(?((x|X)?(\d+)(\.?\d+)?)((\s?倍率?)|(x|X))\)?'
-replace = "$1x"
+match = '/(.*)/'
+replace = "落迁忆-$1"
 
 [managed_config]
 # Append a '#!MANAGED-CONFIG' info to Surge configurations
